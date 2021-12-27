@@ -1,0 +1,47 @@
+{% load static %}
+
+//////////
+              {% for item in gallery_slider %}
+                <img
+                  src="{{item.image_gallery.url}}"
+                  alt="photo 1"
+                  title="Yellow Curved Gallery"
+                />
+                
+              {% endfor %}
+            
+/////////
+            {% for item in gallery %}
+        
+                    <div
+                      class="hexagon-in2"
+                     
+                      style="background-image: url({{item.image_gallery.url}})"
+                    >
+                      <div class="overlay">
+                        <a
+                          href="{{item.image_gallery.url}}"
+                          
+                        ></a>
+                      </div>
+                   
+            {% endfor %}
+//////////         
+            {% for item in gallery_extra %}
+         
+                    <div
+                      class="hexagon-in2"
+                      style="background-image: url({{item.image_gallery.url}})"
+                    >
+                      <div class="overlay">
+                        <a
+                          href="{{item.image_gallery.url}}"
+                          data-rel="lightbox"
+                          class="fa fa-expand"
+                        ></a>
+                      </div>
+                   
+            {% endfor %}
+         
+
+Gallery Gallery Gallery
